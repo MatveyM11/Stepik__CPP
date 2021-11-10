@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 int N2, M, X, Y;
 int N = 0;//for sorting
-int Z, A, B, C;
+int Z, A;
 while(1){
     cin >> N2 >> M >> X >> Y;
     if(N2<M){ //sorting N is a long side
@@ -15,34 +15,26 @@ while(1){
         N=+N2;
     }
     
-   if(N-Y <= M-X and X and Y){
        Z=+ N-Y;
-   }
-   if(M-X <= Z){
        A=+M-X;
-       
-   }
-   if(X <=Z){
-       B=+X;
-       
-   }
-   if(Y <=Z){
-       C=+Y;
     
-   }
-   
-   if((Z <= A and B and C) and Z >=0){
-       cout << Z;
-   }
-   if((A <= Z and B and C) and A >=0){
-       cout << A;
-   }
-   if((B <= Z and A and C) and B >=0){
-       cout << B;
-   }
-   if((C <= A and B and Z ) and C >=0){
-       cout << C;
-   }
+    cout << Z << "_" << A << "_" << X << "_" << Y << endl;
+    
+    if( Z==0 or X==0 or Y==0 or A==0){
+        cout << 0;
+    }
+    else if(Z==1 or X==1 or Y==1 or A==1){
+        cout << 1;
+    }
+    else if((X<=Y)<=M or N){
+        cout << X;
+    }
+   else if((Y<=X)<=M or N){
+        cout << Y;
+    }
+    
+    cout << endl;
+  
 
    
 
