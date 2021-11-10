@@ -2,10 +2,10 @@
 using namespace std;
 
 int main() {
-int N2, M, X, Y;
+int N2, M, X, Y,min, min1, min2;
 int N = 0;//for sorting
 int Z, A;
-while(1){
+
     cin >> N2 >> M >> X >> Y;
     if(N2<M){ //sorting N is a long side
         N=+M;
@@ -18,27 +18,33 @@ while(1){
        Z=+ N-Y;
        A=+M-X;
     
-    cout << Z << "_" << A << "_" << X << "_" << Y << endl;
+
     
-    if( Z==0 or X==0 or Y==0 or A==0){
-        cout << 0;
+      if(Z < A && Z < X && Z << Y){
+        cout << Z;
     }
-    else if(Z==1 or X==1 or Y==1 or A==1){
-        cout << 1;
+    else if (A < Z && A < X && A < Y){
+        cout << A;
     }
-    else if((X<=Y)<=M or N){
+    else if(X < A && X < Z && X < Y){
         cout << X;
     }
-   else if((Y<=X)<=M or N){
+    else if(Y < Z && Y < A && Y < X){
         cout << Y;
     }
-    
-    cout << endl;
-  
+    else if(N == M and N==X and N==Y){
+        cout << N;
+    }
+     else if(X==Y){
+        cout << X;
+    }
+     else if(X== 0 or Y == 0 or N == 0 or Z == 0){
+         cout << 0;
+     }
 
    
 
 
-}
+
   return 0;
 }
