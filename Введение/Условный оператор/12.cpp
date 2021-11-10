@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-int N2, M, X, Y,min, min1, min2;
+int N2, M, X, Y;
 int N = 0;//for sorting
 int Z, A;
 
